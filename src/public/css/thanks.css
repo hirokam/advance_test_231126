@@ -1,0 +1,46 @@
+.base {
+    height: 100vh;
+    position: relative;
+}
+
+.thanks-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    }
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Inika', serif;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 140px;
+    color: #e7e7eb;
+}
+
+.message-button__group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+.message-button__group p {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.home {
+    text-decoration: none;
+    background: #9d8e87;
+    border: none;
+    color: #e9dfe5;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Inika', serif;
+    font-family: 'Noto Serif JP', serif;
+}

@@ -1,0 +1,160 @@
+.header__title {
+    padding-top: 0.5px;
+    border-bottom: solid 1px #eee9e6;
+}
+
+.header__title h2,
+.content__title h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: lighter;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Inika', serif;
+    margin-bottom: 15px;
+}
+
+.content__inner {
+    margin: 10px 200px 30px;
+    padding-top: 10px;
+}
+
+.inner__items {
+    display: flex;
+}
+
+.inner__item-title {
+    width: 200px;
+    font-size: 15px;
+}
+
+.inner__item-title span {
+    color: red;
+    margin-left: 5px;
+}
+
+p {
+    color: red;
+    font-size: 12px;
+}
+
+.inner__item-text,
+.inner__item-radio,
+.inner__item-select,
+.inner__item-textarea {
+    margin-left: 60px;
+}
+
+.fullname {
+    display: flex;
+}
+
+.last-name, .first-name {
+    width: 310px;
+    height: 30px;
+    border: none;
+    background: #f5f5f5;
+    color: #dcdcdc;
+    padding-left: 30px;
+}
+
+.last-name-group p {
+    margin-left: 20px;
+}
+
+.first-name {
+    margin-left: 20px;
+}
+
+.first-name-group p {
+    margin-left: 40px;
+}
+
+.gender-group p {
+    margin-left: 90px;
+}
+
+.email-group p {
+    margin-left: 30px;
+}
+
+.tel-group p {
+    margin-left: 30px;
+}
+
+.address-group p {
+    margin-left: 30px;
+}
+
+.building-group p {
+    margin-bottom: 35px;
+}
+
+.categories-group p {
+    margin-left: 30px;
+}
+
+.opinion-group p {
+    margin-left: 30px;
+}
+
+.male {
+    margin-left: 5px;
+}
+
+.female, .others {
+    margin-left: 50px;
+}
+
+.tel {
+    width: 205px;
+    height: 30px;
+    border: none;
+    background: #f5f5f5;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+.email, .address, .building-name{
+    width: 650px;
+    height: 30px;
+    border: none;
+    background: #f5f5f5;
+    color: #dcdcdc;
+    padding-left: 30px;
+}
+
+.categories {
+    width: 325px;
+    height: 30px;
+    border: none;
+    background: #f5f5f5;
+    color: #dcdcdc;
+    padding-left: 30px;
+}
+
+.opinion {
+    width: 650px;
+    border: none;
+    background: #f5f5f5;
+    color: #dcdcdc;
+    padding-top: 15px;
+    padding-left: 30px;
+    resize: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.confirm-button {
+    background: #9d8e87;
+    color: #fffafa;
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
