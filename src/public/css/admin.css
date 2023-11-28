@@ -41,7 +41,7 @@
 }
 
 .content__search-group {
-    width: 1100px;
+    width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -52,11 +52,105 @@
     height: 35px;
     background: #f5f5f5;
     border: solid 1px #d6c6af;
-    color: #d6c6af;
+}
+
+.content__search-text {
+    position: relative;
+}
+
+.search__submit {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: inline-block;
+    top: 25.7%;
+    left: 90%;
+    z-index: 1;
+}
+
+.text {
+    width: 340px;
+    padding-left: 20px;
+}
+
+.content__search-gender::after {
+    content: "";
+    border-top: solid 8px #d6c6af;
+    border-left: solid 7.5px transparent;
+    border-right: solid 7.5px transparent;
+    position: absolute;
+    top: 25.7%;
+    left: 47.3%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.gender {
+    width: 100px;
+    padding-left: 20px;
+    position: relative;
+    appearance: none;
+}
+
+.content__search-categories::after {
+    content: "";
+    border-top: solid 8px #d6c6af;
+    border-left: solid 7.5px transparent;
+    border-right: solid 7.5px transparent;
+    position: absolute;
+    top: 25.7%;
+    left: 64.7%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.categories {
+    width: 200px;
+    padding-left: 20px;
+    position: relative;
+    appearance: none;
+}
+
+.date {
+    width: 200px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.date::before {
+    content: attr(placeholder);
+}
+
+.date::-webkit-datetime-edit-fields-wrapper {
+    display: none;
+}
+
+.date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    z-index: 1;
+}
+
+.date::after {
+    content: "";
+    border-top: solid 8px #d6c6af;
+    border-left: solid 7.5px transparent;
+    border-right: solid 7.5px transparent;
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 83%;
+    pointer-events: none;
 }
 
 .content__export-page {
-    width: 1100px;
+    width: 1000px;
     margin: 50px auto 0;
     display: flex;
     justify-content: space-between;
@@ -74,12 +168,12 @@
 }
 
 .content__search-result {
-    width: 1100px;
+    width: 1000px;
     margin: 20px auto;
 }
 
 .search-result-table {
-    width: 1100px;
+    width: 1000px;
     border: solid 1px #d6c6af;
 }
 

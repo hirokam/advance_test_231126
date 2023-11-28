@@ -32,17 +32,17 @@
             <div class="content__register-inner-group">
                 <div class="content__register-inner">
                     <p class="content__register-inner-index-name">お名前</p>
-                    <input type="text" value="例:山田 太郎" class="content__register-inner-name">
+                    <input type="text" value="" placeholder="例:山田 太郎" class="content__register-inner-name">
                     <p class="error-message">(error)お名前を入力してください</p>
                 </div>
                 <div class="content__register-inner">
                     <p class="content__register-inner-index-email">メールアドレス</p>
-                    <input type="email" value="例:test@example.com" class="content__register-inner-email">
+                    <input type="email" value="" placeholder="例:test@example.com" class="content__register-inner-email">
                     <p class="error-message">(error)メールアドレスを入力してください</p>
                 </div>
                 <div class="content__register-inner">
                     <p class="content__register-inner-index-password">パスワード</p>
-                    <input type="text" value="例:coachtech1106" class="content__register-inner-pass">
+                    <input type="text" value="" placeholder="例:coachtech1106" class="content__register-inner-pass">
                     <p class="error-message">(error)パスワードを入力してください</p>
                 </div>
                 <div class="content__register-inner-button">

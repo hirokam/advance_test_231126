@@ -28,11 +28,11 @@
                 </div>
                 <div class="inner__item-text fullname">
                     <div class="last-name-group">
-                        <input type="text" name="last_name" value="例:山田" class="last-name">
+                        <input type="text" name="last_name" value="" placeholder="例:山田" class="last-name">
                         <p>（error）姓を入力してください</p>
                     </div>
                     <div class="first-name-group">
-                        <input type="text" name="first_name" value="例:太郎" class="first-name">
+                        <input type="text" name="first_name" value="" placeholder="例:太郎" class="first-name">
                         <p>（error）名を入力してください</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="email-group">
-                        <input type="email" name="email" value="例:test@example.com"class="email">
+                        <input type="email" name="email" value="" placeholder="例:test@example.com" class="email">
                         <p>(error)メールアドレスを入力してください</p>
                     </div>
                 </div>
@@ -70,11 +70,11 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="tel-group">
-                        <input type="tel" value="080" class="tel">
+                        <input type="tel" value="" placeholder="080" class="tel">
                         <span>-</span>
-                        <input type="tel" value="1234" class="tel">
+                        <input type="tel" value="" placeholder="1234" class="tel">
                         <span>-</span>
-                        <input type="tel" value="5678" class="tel">
+                        <input type="tel" value="" placeholder="5678" class="tel">
                         <p>(error)電話番号を入力してください</p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="address-group">
-                        <input type="text" name="address" value="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
+                        <input type="text" name="address" value="" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
                         <p>(error)住所を入力してください</p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="building-group">
-                        <input type="text" name="building_name" value="例:千駄ヶ谷マンション101" class="building-name">
+                        <input type="text" name="building_name" value="" placeholder="例:千駄ヶ谷マンション101" class="building-name">
                         <p></p>
                     </div>
                 </div>
@@ -110,8 +110,10 @@
                 </div>
                 <div class="inner__item-select">
                     <div class="categories-group">
-                        <select name="categories" id="" class="categories">選択してください</select>
-                        <p>お問い合わせの種類を選択してください</p>
+                        <select name="categories" id="" class="categories">
+                            <option value="" disabled selected style="display:none;">選択してください</option>
+                        </select>
+                        <p>(error)お問い合わせの種類を選択してください</p>
                     </div>
                 </div>
             </div>
@@ -122,14 +124,14 @@
                 </div>
                 <div class="inner__item-textarea">
                     <div class="opinion-group">
-                        <textarea name="opinion" id="" cols="30" rows="6" class="opinion">お問い合わせ内容をご記載ください</textarea>
-                        <p>お問い合わせ内容を入力してください</p>
+                        <textarea name="opinion" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="6" class="opinion"></textarea>
+                        <p>(error)お問い合わせ内容を入力してください</p>
                     </div>
                 </div>
             </div>
 
             <div class="button">
-                <button class="confirm-button">確認画面</button>
+                <button class="confirm-button" type="submit">確認画面</button>
             </div>
         </form>
     </div>

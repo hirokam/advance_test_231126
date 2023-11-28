@@ -32,12 +32,12 @@
             <div class="content__login-inner-group">
                 <div class="content__login-inner">
                     <p class="content__login-inner-index-email">メールアドレス</p>
-                    <input type="email" value="例:test@example.com" class="content__login-inner-email">
+                    <input type="email" value="" placeholder="例:test@example.com" class="content__login-inner-email">
                     <p class="error-message">(error)メールアドレスを入力してください</p>
                 </div>
                 <div class="content__login-inner">
                     <p class="content__login-inner-index-password">パスワード</p>
-                    <input type="text" value="例:coachtech1106" class="content__login-inner-pass">
+                    <input type="text" value="" placeholder="例:coachtech1106" class="content__login-inner-pass">
                     <p class="error-message">(error)パスワードを入力してください</p>
                 </div>
                 <div class="content__login-inner-button">

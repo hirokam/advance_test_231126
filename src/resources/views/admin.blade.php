@@ -29,16 +29,21 @@
     </div>
     <div class="content__search-group">
         <div class="content__search-text">
-            <input type="text" class="text">
+            <input type="text" placeholder="名前やメールアドレスを入力してください" class="text">
+            <button type="submit" class="fas" value="&#xf002;"></button>
         </div>
         <div class="content__search-gender">
-            <select name="" id="" class="gender"></select>
+            <select name="gender" id="" class="gender">
+                <option value="" disabled selected style="display:none;">性別</option>
+            </select>
         </div>
         <div class="content__search-categories">
-            <select name="" id="" class="categories"></select>
+            <select name="categories" id="" class="categories">
+                <option value="" disabled selected style="display:none;">お問い合わせの種類</option>
+            </select>
         </div>
         <div class="content__search-date">
-            <input type="date" value="日付を選択してください" class="date">
+            <input type="date" value="" placeholder="日付を選択してください" class="date">
         </div>
     </div>
     <div class="content__export-page">
