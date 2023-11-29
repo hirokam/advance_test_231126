@@ -16,7 +16,9 @@
         <h2>FashionablyLate</h2>
         <div class="header__nav">
             <nav>
-                <button class="header__nav-button">login</button>
+                <form action="/login">
+                    <button class="header__nav-button">login</button>
+                </form>
             </nav>
         </div>
     </div>

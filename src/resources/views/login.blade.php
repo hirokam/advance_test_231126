@@ -16,7 +16,9 @@
         <h2>FashionablyLate</h2>
         <div class="header__nav">
             <nav>
-                <button class="header__nav-button">register</button>
+                <form action="/register">
+                    <button class="header__nav-button">register</button>
+                </form>
             </nav>
         </div>
     </div>

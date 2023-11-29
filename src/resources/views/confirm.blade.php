@@ -58,7 +58,7 @@
             </table>
             <div class="button">
                 <button class="submit">送信</button>
-                <a href="" class="correct">修正</a>
+                <a href="/" class="correct">修正</a>
             </div>
         </form>
     </div>
