@@ -79,11 +79,11 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="tel-group">
-                        <input type="tel" name="tel" placeholder="080" class="tel">
+                        <input type="tel" name="tel1" placeholder="080" class="tel">
                         <span>-</span>
-                        <input type="tel" name="tel" placeholder="1234" class="tel">
+                        <input type="tel" name="tel2" placeholder="1234" class="tel">
                         <span>-</span>
-                        <input type="tel" name="tel" placeholder="5678" class="tel">
+                        <input type="tel" name="tel3" placeholder="5678" class="tel">
                         @error('tel')
                         <p>{{$errors->first('tel')}}</p>
                         @enderror
@@ -112,12 +112,11 @@
                 <div class="inner__item-text">
                     <div class="building-group">
                         <input type="text" name="building" placeholder="例:千駄ヶ谷マンション101" class="building-name">
-                        <p></p>
                     </div>
                 </div>
             </div>
 
-            <div class="inner__items">
+            {{--<div class="inner__items">
                 <div class="inner__item-title">
                     お問い合わせの種類<span>※</span>
                 </div>
@@ -131,7 +130,7 @@
                         @enderror
                     </div>
                 </div>
-            </div>
+            </div>--}}
 
             <div class="inner__items">
                 <div class="inner__item-title">

@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\controllers\ContactController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,9 @@ use App\Http\controllers\ContactController;
 
 Route::get('/', [ContactController::class, 'contact']);
 Route::post('/confirm', [contactController::class, 'confirm']);
-Route::get('/confirm', [ContactController::class, 'confirm']);
-Route::get('/thanks', [ContactController::class, 'thanks']);
-Route::get('/admin', [ContactController::class, 'admin']);
-Route::get('/register', [ContactController::class, 'register']);
-Route::get('login', [ContactController::class, 'login']);
+Route::post('/thanks', [ContactController::class, 'thanks']);
+
+Route::post('/admin', [AuthController::class, 'admin']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::post('login', [AuthController::class, 'login']);

@@ -32,19 +32,22 @@
         </div>
         <div class="content__login-flame">
             <div class="content__login-inner-group">
-                <div class="content__login-inner">
-                    <p class="content__login-inner-index-email">メールアドレス</p>
-                    <input type="email" value="" placeholder="例:test@example.com" class="content__login-inner-email">
-                    <p class="error-message">(error)メールアドレスを入力してください</p>
-                </div>
-                <div class="content__login-inner">
-                    <p class="content__login-inner-index-password">パスワード</p>
-                    <input type="text" value="" placeholder="例:coachtech1106" class="content__login-inner-pass">
-                    <p class="error-message">(error)パスワードを入力してください</p>
-                </div>
-                <div class="content__login-inner-button">
-                    <button class="login-button">ログイン</button>
-                </div>
+                <form action="/admin" method="post">
+                @csrf
+                    <div class="content__login-inner">
+                        <p class="content__login-inner-index-email">メールアドレス</p>
+                        <input type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com" class="content__login-inner-email">
+                        <p class="error-message">(error)メールアドレスを入力してください</p>
+                    </div>
+                    <div class="content__login-inner">
+                        <p class="content__login-inner-index-password">パスワード</p>
+                        <input type="text" name="password" value="" placeholder="例:coachtech1106" class="content__login-inner-pass">
+                        <p class="error-message">(error)パスワードを入力してください</p>
+                    </div>
+                    <div class="content__login-inner-button">
+                        <button class="login-button">ログイン</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

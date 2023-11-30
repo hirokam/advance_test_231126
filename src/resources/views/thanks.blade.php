@@ -17,6 +17,8 @@
 
     <div class="message-button__group">
         <p>お問い合わせありがとうございました</p>
-        <button class="home" action="/">HOME</button>
+        <form action="/">
+            <button class="home" >HOME</button>
+        </form>
     </div>
 @endsection

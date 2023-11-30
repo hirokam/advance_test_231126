@@ -24,6 +24,8 @@
     font-size: 15px;
 }
 
+
+
 .text2 {
     height: 90px;
     padding: 30px;
@@ -49,6 +51,14 @@ td {
 input {
     border: none;
     background: none;
+}
+
+textarea {
+    border: none;
+    background: none;
+    resize: none;
+    width: 600px;
+
 }
 
 .button {
