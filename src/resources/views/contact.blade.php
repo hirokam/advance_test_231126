@@ -21,7 +21,8 @@
         <h2>Contact</h2>
     </div>
     <div class="content__inner">
-        <form action="" class="">
+        <form action="/confirm" method="post">
+        @csrf
             <div class="inner__items">
                 <div class="inner__item-title">
                     お名前<span>※</span>
@@ -29,11 +30,15 @@
                 <div class="inner__item-text fullname">
                     <div class="last-name-group">
                         <input type="text" name="last_name" value="" placeholder="例:山田" class="last-name">
-                        <p>（error）姓を入力してください</p>
+                        @error('last_name')
+                        <p>{{$errors->first('last_name')}}</p>
+                        @enderror
                     </div>
                     <div class="first-name-group">
                         <input type="text" name="first_name" value="" placeholder="例:太郎" class="first-name">
-                        <p>（error）名を入力してください</p>
+                        @error('first_name')
+                        <p>{{$errors->first('last_name')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -48,7 +53,9 @@
                         <label for=""><input type="radio" name="gender" value="2" class="female">女性</label>
                         <label for=""><input type="radio" name="gender" value="3" class="others">その他</label>
                     </div>
-                    <p>(error)性別を選択してください</p>
+                    @error('gender')
+                    <p>{{$errors->first('gender')}}</p>
+                    @enderror
                 </div>
             </div>
 
@@ -59,7 +66,9 @@
                 <div class="inner__item-text">
                     <div class="email-group">
                         <input type="email" name="email" value="" placeholder="例:test@example.com" class="email">
-                        <p>(error)メールアドレスを入力してください</p>
+                        @error('email')
+                        <p>{{$errors->first('email')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -70,12 +79,14 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="tel-group">
-                        <input type="tel" value="" placeholder="080" class="tel">
+                        <input type="tel" name="tel" placeholder="080" class="tel">
                         <span>-</span>
-                        <input type="tel" value="" placeholder="1234" class="tel">
+                        <input type="tel" name="tel" placeholder="1234" class="tel">
                         <span>-</span>
-                        <input type="tel" value="" placeholder="5678" class="tel">
-                        <p>(error)電話番号を入力してください</p>
+                        <input type="tel" name="tel" placeholder="5678" class="tel">
+                        @error('tel')
+                        <p>{{$errors->first('tel')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -86,8 +97,10 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="address-group">
-                        <input type="text" name="address" value="" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
-                        <p>(error)住所を入力してください</p>
+                        <input type="text" name="address" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
+                        @error('address')
+                        <p>{{$errors->first('address')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -98,7 +111,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="building-group">
-                        <input type="text" name="building_name" value="" placeholder="例:千駄ヶ谷マンション101" class="building-name">
+                        <input type="text" name="building" placeholder="例:千駄ヶ谷マンション101" class="building-name">
                         <p></p>
                     </div>
                 </div>
@@ -113,7 +126,9 @@
                         <select name="categories" id="" class="categories">
                             <option value="" disabled selected style="display:none;">選択してください</option>
                         </select>
-                        <p>(error)お問い合わせの種類を選択してください</p>
+                        @error('categories')
+                        <p>{{$errors->first('categories')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -124,8 +139,10 @@
                 </div>
                 <div class="inner__item-textarea">
                     <div class="opinion-group">
-                        <textarea name="opinion" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="6" class="opinion"></textarea>
-                        <p>(error)お問い合わせ内容を入力してください</p>
+                        <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="6" class="opinion"></textarea>
+                        @error('detail')
+                        <p>{{$errors->first('detail')}}</p>
+                        @enderror
                     </div>
                 </div>
             </div>
