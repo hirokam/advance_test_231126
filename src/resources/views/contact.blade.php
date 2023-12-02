@@ -79,11 +79,11 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="tel-group">
-                        <input type="tel" name="tel1" placeholder="080" class="tel">
+                        <input type="tel" name="tel1" value="" placeholder="080" class="tel">
                         <span>-</span>
-                        <input type="tel" name="tel2" placeholder="1234" class="tel">
+                        <input type="tel" name="tel2" value="" placeholder="1234" class="tel">
                         <span>-</span>
-                        <input type="tel" name="tel3" placeholder="5678" class="tel">
+                        <input type="tel" name="tel3" value="" placeholder="5678" class="tel">
                         @error('tel')
                         <p>{{$errors->first('tel')}}</p>
                         @enderror
@@ -97,7 +97,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="address-group">
-                        <input type="text" name="address" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
+                        <input type="text" name="address" value="" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" class="address">
                         @error('address')
                         <p>{{$errors->first('address')}}</p>
                         @enderror
@@ -111,7 +111,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="building-group">
-                        <input type="text" name="building" placeholder="例:千駄ヶ谷マンション101" class="building-name">
+                        <input type="text" name="building" value="" placeholder="例:千駄ヶ谷マンション101" class="building-name">
                     </div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 </div>
                 <div class="inner__item-textarea">
                     <div class="opinion-group">
-                        <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="5" class="opinion"></textarea>
+                        <textarea name="detail" value="" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="5" class="opinion"></textarea>
                         @error('detail')
                         <p>{{$errors->first('detail')}}</p>
                         @enderror

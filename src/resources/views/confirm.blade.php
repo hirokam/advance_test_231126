@@ -99,6 +99,9 @@
             </table>
             <div class="button">
                 <button class="submit">送信</button>
+                <form action="/" method="post">
+                    <input type="hidden">
+                </form>
                 <a href="/" class="correct">修正</a>
             </div>
         </form>
