@@ -30,7 +30,7 @@
     <div class="content__search-group">
         <div class="content__search-text">
             <input type="text" placeholder="名前やメールアドレスを入力してください" class="text">
-            <button type="submit" class="fas" value="&#xf002;"></button>
+            <button type="submit" class="search__submit" value=""></button>
         </div>
         <div class="content__search-gender">
             <select name="gender" id="" class="gender">
