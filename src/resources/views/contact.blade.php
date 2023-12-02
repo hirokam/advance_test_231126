@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            {{--<div class="inner__items">
+            <div class="inner__items">
                 <div class="inner__item-title">
                     お問い合わせの種類<span>※</span>
                 </div>
@@ -124,13 +124,16 @@
                     <div class="categories-group">
                         <select name="categories" id="" class="categories">
                             <option value="" disabled selected style="display:none;">選択してください</option>
+                            @foreach ($categories as $category)
+                            <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                            @endforeach
                         </select>
                         @error('categories')
                         <p>{{$errors->first('categories')}}</p>
                         @enderror
                     </div>
                 </div>
-            </div>--}}
+            </div>
 
             <div class="inner__items">
                 <div class="inner__item-title">
@@ -138,7 +141,7 @@
                 </div>
                 <div class="inner__item-textarea">
                     <div class="opinion-group">
-                        <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="6" class="opinion"></textarea>
+                        <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" id="" cols="30" rows="5" class="opinion"></textarea>
                         @error('detail')
                         <p>{{$errors->first('detail')}}</p>
                         @enderror
