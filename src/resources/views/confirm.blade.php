@@ -28,21 +28,23 @@
                     <th>お名前</th>
                     <td>
                         <input type="text" name="fullname" value="{{ $contact['last_name'] }}  {{ $contact['first_name'] }}" class="text1" readonly>
+                        <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}" readonly>
+                        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}" readonly>
                     </td>
                 </tr>
                 <tr>
                     <th>性別</th>
                     <td>
-                        <input type="text" name="gender" value="{{ $contact['gender'] }}" class="text1" readonly>
-                        {{--<?php
-                            if ($contact['gender'] == 1){
-                            echo '男性';
-                            }elseif ($contact['gender'] == 2){
-                            echo '女性';
-                            }else{
-                            echo 'その他';
-                            }
-                        ?>--}}
+                        <input type="text" name="gender" 
+                        value="<?php if ($contact['gender'] == 1){
+                        echo '男性';
+                        }elseif ($contact['gender'] == 2){
+                        echo '女性';
+                        }else{
+                        echo 'その他';
+                        }
+                        ?>" class="text1" readonly>
+                        <input type="hidden" name="gender" value="{{ $contact['gender'] }}" class="">
                     </td>
                 </tr>
                 <tr>
@@ -61,19 +63,45 @@
                     <th>建物名</th>
                     <td><input type="text" name="building" value="{{ $contact['building'] }}" class="text1" readonly></td>
                 </tr>
-                {{--<tr>
+                <tr>
                     <th>お問い合わせの種類</th>
-                    <td><input type="text" name="" value="サンプルテキスト" class="text1" readonly></td>
-                </tr>--}}
+                    <td>
+                        <input type="text" name="category" 
+                        value="<?php switch ($contact['categories']) {
+                            case (1):
+                            echo "1.商品のお届けについて";
+                            break;
+                            case (2):
+                            echo "2.商品の交換について";
+                            break;
+                            case (3):
+                            echo "3.商品トラブル";
+                            break;
+                            case (4):
+                            echo "4.ショップへのお問い合わせ";
+                            break;
+                            case (5):
+                            echo "5.その他";
+                            break;
+                            };?>" class="text1" readonly>
+                        <input type="hidden" name="category_id" value="{{ $contact['categories'] }}" class="">
+                    </td>
+
+                </tr>
                 <tr>
                     <th>お問い合わせ内容</th>
                     <td>
-                        <textarea name="detail" id="" cols="40" rows="3" class="text2" readonly>{{ $contact['detail'] }}</textarea>
+                        <div class="text2__flame">
+                            <textarea name="detail" id="" cols="40" rows="3" class="text2" readonly>{{ $contact['detail'] }}</textarea>
+                        </div>
                     </td>
                 </tr>
             </table>
             <div class="button">
                 <button class="submit">送信</button>
+                <form action="/" method="post">
+                    <input type="hidden">
+                </form>
                 <a href="/" class="correct">修正</a>
             </div>
         </form>

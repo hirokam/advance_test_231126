@@ -19,6 +19,7 @@
 }
 
 .text1 {
+    width: 600px;
     height: 50px;
     padding: 30px;
     font-size: 15px;
@@ -26,10 +27,8 @@
 
 
 
-.text2 {
+.text2__flame {
     height: 90px;
-    padding: 30px;
-    font-size: 15px;
 }
 
 th {
@@ -54,11 +53,13 @@ input {
 }
 
 textarea {
+    padding: 13px 30px 13px 30px;
+    font-size: 15px;
     border: none;
     background: none;
     resize: none;
     width: 600px;
-
+    overflow: auto;
 }
 
 .button {

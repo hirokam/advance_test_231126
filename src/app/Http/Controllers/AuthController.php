@@ -7,10 +7,7 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function register(Request $request) {
-        $auth = $request->only(['name', 'email', 'password']);
-
-        User::create($auth);
+    public function register() {
         return view('register');
     }
 
