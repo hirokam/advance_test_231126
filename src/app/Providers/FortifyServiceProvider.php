@@ -30,11 +30,11 @@ class FortifyServiceProvider extends ServiceProvider
     {
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::registerView(function () {
-            return view('auth.register');
+            return view('login');
         });
 
         Fortify::loginView(function () {
-            return view('auth.login');
+            return view('admin');
         });
 
         RateLimiter::for('login', function (Request $request) {
