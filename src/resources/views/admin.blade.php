@@ -51,7 +51,7 @@
             <button class="export">エクスポート</button>
         </div>
         <div class="content__page">
-            <p>ページネーション</p>
+            <p>{{$params->links()}}</p>
         </div>
     </div>
     <div class="content__search-result">
@@ -63,36 +63,44 @@
                 <th>お問い合わせの種類</th>
                 <th></th>
             </tr>
+            @foreach ($params as $param)
             <tr>
-                <td>山田　太郎</td>
-                <td>男性</td>
-                <td>test@example.com</td>
-                <td>商品の交換について</td>
+                <td>{{ $param['last_name'] }} {{$param['first_name']}}</td>
+                <td><?php if($param['gender'] == 1) {
+                    echo '男性';
+                }elseif($param['gender'] == 2) {
+                    echo '女性';
+                }else {
+                    echo 'その他';
+                } ?></td>
+                <td>{{ $param['email'] }}</td>
+                <td><?php switch ($param['category_id']) {
+                            case (1):
+                            echo "1.商品のお届けについて";
+                            break;
+                            case (2):
+                            echo "2.商品の交換について";
+                            break;
+                            case (3):
+                            echo "3.商品トラブル";
+                            break;
+                            case (4):
+                            echo "4.ショップへのお問い合わせ";
+                            break;
+                            case (5):
+                            echo "5.その他";
+                            break;
+                            };?></td>
                 <td>
                     <button class="detail">詳細</button>
                 </td>
             </tr>
-            <tr>
-                <td>山田　太郎</td>
-                <td>男性</td>
-                <td>test@example.com</td>
-                <td>商品の交換について</td>
-                <td>
-                    <button class="detail">詳細</button>
-                </td>
-            </tr>
-            <tr>
-                <td>山田　太郎</td>
-                <td>男性</td>
-                <td>test@example.com</td>
-                <td>商品の交換について</td>
-                <td>
-                    <button class="detail">詳細</button>
-                </td>
-            </tr>
+            @endforeach
         </table>
         <div class="content__reset">
-            <button class="reset">リセット</button>
+            <form action="/admin">
+                <button class="reset">リセット</button>
+            </form>
         </div>
     </div>
 
