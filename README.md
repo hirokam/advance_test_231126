@@ -2,7 +2,7 @@
 ## 環境構築
 Dockerビルド
 
-　1.[git_clone_リンク](git@github.com:hirokam/advance_test_kameyamahiroki.git)
+　1.[git clone](git@github.com:hirokam/advance_test_kameyamahiroki.git)
  
 　2.docker-compose up -d --build
 
