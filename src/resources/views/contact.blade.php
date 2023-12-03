@@ -29,13 +29,13 @@
                 </div>
                 <div class="inner__item-text fullname">
                     <div class="last-name-group">
-                        <input type="text" name="last_name" value="" placeholder="例:山田" class="last-name">
+                        <input type="text" name="last_name" value="{{old('last_name')}}" placeholder="例:山田" class="last-name">
                         @error('last_name')
                         <p>{{$errors->first('last_name')}}</p>
                         @enderror
                     </div>
                     <div class="first-name-group">
-                        <input type="text" name="first_name" value="" placeholder="例:太郎" class="first-name">
+                        <input type="text" name="first_name" value="{{old('first_name')}}" placeholder="例:太郎" class="first-name">
                         @error('first_name')
                         <p>{{$errors->first('last_name')}}</p>
                         @enderror
@@ -65,7 +65,7 @@
                 </div>
                 <div class="inner__item-text">
                     <div class="email-group">
-                        <input type="email" name="email" value="" placeholder="例:test@example.com" class="email">
+                        <input type="email" name="email" value="{{old('email')}}" placeholder="例:test@example.com" class="email">
                         @error('email')
                         <p>{{$errors->first('email')}}</p>
                         @enderror

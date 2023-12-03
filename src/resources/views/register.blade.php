@@ -37,17 +37,23 @@
                     <div class="content__register-inner">
                         <p class="content__register-inner-index-name">お名前</p>
                         <input type="text" name="name" value="{{ old('name') }}" placeholder="例:山田 太郎" class="content__register-inner-name">
-                        <p class="error-message">(error)お名前を入力してください</p>
+                        @error('name')
+                        <p class="error-message">{{$errors->first('name')}}</p>
+                        @enderror
                     </div>
                     <div class="content__register-inner">
                         <p class="content__register-inner-index-email">メールアドレス</p>
                         <input type="email" name="email" value="{{ old('email') }}" placeholder="例:test@example.com" class="content__register-inner-email">
-                        <p class="error-message">(error)メールアドレスを入力してください</p>
+                        @error('email')
+                        <p class="error-message">{{$errors->first('email')}}</p>
+                        @enderror
                     </div>
                     <div class="content__register-inner">
                         <p class="content__register-inner-index-password">パスワード</p>
                         <input type="text" name="password" value="" placeholder="例:coachtech1106" class="content__register-inner-pass">
-                        <p class="error-message">(error)パスワードを入力してください</p>
+                        @error('password')
+                        <p class="error-message">{{$errors->first('password')}}</p>
+                        @enderror
                     </div>
                     <div class="content__register-inner-button">
                         <button class="register-button">登録</button>

@@ -20,4 +20,9 @@ class Contact extends Model
         'building',
         'detail'
     ];
+
+    public function category()
+    {
+        return $this->hasOne('App\Models\Category');
+    }
 }

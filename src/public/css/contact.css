@@ -21,7 +21,8 @@
 
 .inner__items {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .inner__item-title {
@@ -37,6 +38,9 @@
 p {
     color: red;
     font-size: 12px;
+    height: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .inner__item-text,
@@ -216,7 +220,7 @@ p {
     border-right: 14.5px solid transparent;
     content: "";
     position: absolute;
-    top: 75.7%;
+    top: 74.3%;
     left: 52%;
     z-index: 10;
     pointer-events: none;
