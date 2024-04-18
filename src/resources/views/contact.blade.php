@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>お問い合わせフォーム入力ページ</title>
+    <title>お問い合わせ</title>
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}" >
@@ -9,18 +9,18 @@
 
 
 @section('header')
-    <div class="header__title">
-        <h2>FashionablyLate</h2>
+    <div class="header__title-frame">
+        <h1 class="header__title">FashionablyLate</h1>
     </div>
 
 @endsection
 
 
 @section('content')
-    <div class="content__title">
-        <h2>Contact</h2>
+    <div class="content__title-frame">
+        <h2 class="content__title">Contact</h2>
     </div>
-    <div class="content__inner">
+    <div class="content__inner-frame">
         <form action="/confirm" method="post">
         @csrf
             <div class="inner__items">
